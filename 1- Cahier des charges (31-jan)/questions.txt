@@ -1,0 +1,18 @@
+disposition des sieges 1 sale et recoit une salle deja fait.
+différent prix des sieges selon la disposition.
+enregistrement des rapports en pdf
+connexction admin
+paiement fictif
+generateur de code QR
+application de gestion responsive
+info client : proposition
+mobilité réduite
+alerte sièges séparé.(proposition j'aimerais que non... oblige a selectionner dse places.)
+pas de logo
+pas de couleur
+images de spectacles
+ratio 4:3
+proposition pour le language
+client contabilité pour lecture seul des infos
+show cancelé
+limite billet par client par spectacle
