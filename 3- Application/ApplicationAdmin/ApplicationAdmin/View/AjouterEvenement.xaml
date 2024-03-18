@@ -1,0 +1,195 @@
+﻿<Page x:Class="ApplicationAdmin.View.AjouterEvenement"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:viewmodele="clr-namespace:ApplicationAdmin.Model_View"
+      xmlns:local="clr-namespace:ApplicationAdmin.View"
+      d:DataContext="{d:DesignInstance Type=viewmodele:AppVM}"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AjouterEvenement">
+
+    <Page.Resources>
+        <Style x:Key="ListBoxItemStyle" TargetType="ListBoxItem">
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="BorderThickness" Value="0,0,0,3" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Margin" Value="0,0,0,5" />
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#FF6B35" Offset="0"/>
+                        <GradientStop Color="#FFD6CA92" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5">
+                            <ContentPresenter />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Color="White" Offset="0"/>
+                                            <GradientStop Color="#FFDCD6B8" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="BorderBrush" Value="Black" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Color="White" Offset="0"/>
+                                            <GradientStop Color="#FFBD7E67" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="BorderBrush" Value="Black" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="BeautifulButtonStyle" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#FF6B35" Offset="0"/>
+                        <GradientStop Color="#FFD6CA92" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#FF75561E"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border x:Name="shadow" Background="Transparent" BorderBrush="#80000000" BorderThickness="2" CornerRadius="10" Margin="4,4,0,0" Opacity="0"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="shadow" Property="Opacity" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Color="#211d19" Offset="0"/>
+                                            <GradientStop Color="#6e685c" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition Width="18*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label HorizontalAlignment="Center" FontSize="40" Foreground="#FF6B35" FontWeight="ExtraBold" VerticalAlignment="Top" Grid.ColumnSpan="5">Théâtre Cchic</Label>
+
+        <Button Grid.Column="3" Margin="3" Click="AccountClick">
+            <Image Source="/View/account.png"></Image>
+        </Button>
+        <Border Grid.Column="1" Grid.Row="2" BorderBrush="black" BorderThickness="2" Background="White" CornerRadius="3" >
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label  Grid.ColumnSpan="2" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Création d'évenement"></Label>
+                <Label Grid.Column="0" Grid.Row="1" FontSize="15"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Content="Artiste :"></Label>
+                <Label Grid.Column="0" Grid.Row="2" FontSize="15"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Content="Nom du spectacle :"></Label>
+                <Label Grid.Column="0" Grid.Row="3" FontSize="13"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Content="Cout de l'évenement :"></Label>
+                <Label Grid.Column="0" Grid.Row="4" FontSize="15"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Content="Image du spectacle :"></Label>
+                <Label Grid.Column="0" Grid.Row="5" FontSize="13"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Content="Date Spectacle et limite d'achat :"></Label>
+                <Label Grid.Column="0" Grid.Row="6" FontSize="15"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Content="Heure :"></Label>
+                <Label Grid.Column="0" Grid.Row="7" FontSize="15"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Content="Coût :"></Label>
+
+                <TextBox Grid.Column="1" Grid.Row="1" Margin="5,5" x:Name="Artiste"></TextBox>
+                <TextBox Grid.Column="1" Grid.Row="2" Margin="5,5" x:Name="Nom" ></TextBox>
+                <TextBox Grid.Column="1" Grid.Row="3" Margin="5,5" x:Name="CoutEvenement" Text="{Binding CoutAjout}"></TextBox>
+                <Button Grid.Column="2" Grid.Row="4" Margin="5,5" Click="Buttonfile_Click" HorizontalAlignment="Right">Choisir un image</Button>
+                <Label x:Name="filename" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left"></Label>
+                <DatePicker Grid.Column="1" Grid.Row="5" Margin="5,5" x:Name="Datepicker" Text="{Binding DateAjout}"></DatePicker>
+                <DatePicker Grid.Column="2" Grid.Row="5" Margin="5,5" x:Name="Datepickerlimite" Text="{Binding DateLimiteAjout}"></DatePicker>
+
+                <TextBox Grid.Column="1" Grid.Row="6" Margin="5,5" x:Name="Heure"></TextBox>
+
+                <ListBox Grid.Column="1" Grid.Row="7" Grid.RowSpan="3" ItemsSource="{Binding CoutRange}" Margin="5">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50px"></ColumnDefinition>
+                                    <ColumnDefinition Width="200px"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Content="{Binding Range}"></Label>
+                                <TextBox Grid.Column="1" Width="100" Text="{Binding Cout, Mode=TwoWay}"></TextBox>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </Border>
+
+        <Image Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Top" Source="/View/theatre_plan_text_white_background.jpg" Height="250"></Image>
+        <Button Style="{StaticResource BeautifulButtonStyle}" Command="{Binding CreerEvenement}" Grid.ColumnSpan="2"  Click="Créer" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="3" FontSize="20">Créer</Button>
+        <Label  Grid.ColumnSpan="2" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="3" FontSize="20" x:Name="Res"></Label>
+
+    </Grid>
+</Page>

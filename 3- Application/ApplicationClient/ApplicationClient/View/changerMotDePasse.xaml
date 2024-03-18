@@ -1,0 +1,100 @@
+﻿<Page x:Class="ApplicationClient.View.changerMotDePasse"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ApplicationClient.View"
+      mc:Ignorable="d" 
+      MaxHeight="800" MaxWidth="600" MinHeight="800" MinWidth="600"
+      Title="changerMotDePasse">
+
+    <Page.Resources>
+        <Style x:Key="BeautifulButtonStyle" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#FF6B35" Offset="0"/>
+                        <GradientStop Color="#FFD6CA92" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#FF75561E"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border x:Name="shadow" Background="Transparent" BorderBrush="#80000000" BorderThickness="2" CornerRadius="10" Margin="4,4,0,0" Opacity="0"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="shadow" Property="Opacity" Value="1"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="1" Grid.Row="1" BorderThickness="2" BorderBrush="Black" CornerRadius="4">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"></RowDefinition>
+                    <RowDefinition Height="3*"></RowDefinition>
+                    <RowDefinition Height="3*"></RowDefinition>
+                    <RowDefinition Height="3*"></RowDefinition>
+                    <RowDefinition Height="4*"></RowDefinition>
+                    <RowDefinition Height="3*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+
+                <TextBlock HorizontalAlignment="Center" FontSize="40" Foreground="#FF6B35" Grid.RowSpan="2" FontWeight="ExtraBold" VerticalAlignment="Top" TextAlignment="Center" TextWrapping="Wrap"  Grid.ColumnSpan="3">Changement de mot de passe</TextBlock>
+
+                <Label HorizontalAlignment="Right" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Grid.Column="0" Grid.Row="2">Ancien mot de passe :</Label>
+                <PasswordBox  x:Name="Ancienmdp" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" Margin="8"></PasswordBox>
+                
+                <Label HorizontalAlignment="Right" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Grid.Column="0" Grid.Row="3">Nouveau mot de passe :</Label>
+                <PasswordBox  x:Name="Nouveaumdp1" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" Margin="8" ></PasswordBox>
+                
+                <TextBlock HorizontalAlignment="Right" TextAlignment="Right" FontSize="20" TextWrapping="Wrap" FontWeight="Bold" Grid.Column="0" Grid.Row="4">Confirmation du mot de passe :</TextBlock>
+                <PasswordBox  x:Name="Nouveaumdp2" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" Margin="8"></PasswordBox>
+
+
+            </Grid>
+        </Border>
+
+        <Button Style="{StaticResource BeautifulButtonStyle}" Width="300"  Click="Confirmer" Grid.Row="2" Grid.Column="1" FontSize="20">Confirmer</Button>
+        <TextBlock HorizontalAlignment="Center" Foreground="LightGray" Grid.Row="3" Grid.Column="1" FontSize="20" x:Name="erreur">Les informations entrées ne sont pas valide</TextBlock>
+
+
+    </Grid>
+</Page>

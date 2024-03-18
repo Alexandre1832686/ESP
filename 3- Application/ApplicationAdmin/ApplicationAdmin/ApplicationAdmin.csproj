@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="View\account.png" />
+    <None Remove="View\theatre_plan_text_white_background.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
+    <PackageReference Include="Syncfusion.HtmlToPdfConverter.WPF" Version="24.2.9" />
+    <PackageReference Include="Syncfusion.Pdf.Wpf" Version="24.2.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\account.png" />
+    <Resource Include="View\theatre_plan_text_white_background.jpg" />
+  </ItemGroup>
+
+</Project>

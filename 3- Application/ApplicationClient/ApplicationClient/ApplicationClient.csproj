@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="View\account.png" />
+    <None Remove="View\panier.png" />
+    <None Remove="View\research-4.png" />
+    <None Remove="View\theatre_plan_text_white_background.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.4.0" />
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
+    <PackageReference Include="QRCoder" Version="1.4.3" />
+    <PackageReference Include="Syncfusion.HtmlToPdfConverter.WPF" Version="24.2.8" />
+    <PackageReference Include="Syncfusion.Pdf.Wpf" Version="24.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\account.png" />
+    <Resource Include="View\panier.png" />
+    <Resource Include="View\research-4.png" />
+    <Resource Include="View\theatre_plan_text_white_background.jpg" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\Account.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Accueil.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\changerMotDePasse.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ChangerNom.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Connection.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ErrorWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Historique.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Inscription.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Panier.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\VoirEvenement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Account.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Accueil.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\changerMotDePasse.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ChangerNom.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Connection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ErrorWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Historique.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Inscription.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Panier.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\VoirEvenement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

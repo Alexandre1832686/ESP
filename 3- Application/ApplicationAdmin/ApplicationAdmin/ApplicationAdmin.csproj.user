@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\Accueil.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AjouterEvenement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Connection.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CreerUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Rapport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\RapportWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SelectionRapport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Account.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Accueil.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AjouterEvenement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ChangerNom.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Connection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CreerUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ErrorWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Rapport.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\RapportWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SelectionRapport.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\VoirEvenement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
